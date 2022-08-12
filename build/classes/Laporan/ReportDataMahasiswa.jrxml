@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportDataMahasiswa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba1c2739-c72e-41ae-af00-4275b259137a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select  *  from tmhs]]>
+	</queryString>
+	<field name="nim" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prodi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="104" y="0" width="356" height="38" uuid="fa37b240-f6b5-4519-ae04-bd3e11e32784"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN MAHASISWA STTI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="29" uuid="554b9506-65ad-4129-ad04-94096937dce6"/>
+			</rectangle>
+			<textField>
+				<reportElement x="20" y="15" width="100" height="20" uuid="18edfad6-9b79-498e-8535-3ce1b8cb150d"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="7" width="100" height="20" uuid="84e095cc-bf7a-4fde-a3be-86d07482e424"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="2" width="100" height="20" uuid="2e06d464-96c4-4067-bbba-02d5c03e0e8a"/>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="2" width="100" height="20" uuid="300de8fe-a3a3-425b-9c88-27ec6263e6e5"/>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="2" width="100" height="20" uuid="b69800b3-fcb4-4afa-986d-a8d0d2b11de2"/>
+				<text><![CDATA[PRODI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" uuid="06665ab7-034f-4b6d-8c82-438500d4754a"/>
+			</rectangle>
+			<textField>
+				<reportElement x="42" y="0" width="100" height="20" uuid="336119e4-fad7-4256-a9c0-ae05865590bd"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="0" width="100" height="20" uuid="251d80db-78a1-461b-b067-555507352b87"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="100" height="20" uuid="65490222-4cc9-4499-8790-c50385f3c97a"/>
+				<textFieldExpression><![CDATA[$F{prodi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="409" y="0" width="100" height="20" uuid="6c77c25a-7464-497b-83db-33628e679cd1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[yang Mengetahui: 	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="73" width="152" height="23" uuid="bace9702-752a-4d85-913a-4b8c72ea118d"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ketua STTI Tanjungpinang]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
